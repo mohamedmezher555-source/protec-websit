@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --protec-forest: #0b5d27;
+    --protec-forest-deep: #08431c;
+    --protec-leaf: #65b32e;
+    --protec-surface: #f7faf7;
+    --protec-border: #dce6de;
+    --protec-ink: #102116;
+    --protec-muted: #4b6152;
+    color-scheme: light;
+  }
+
+  html.dark {
+    --protec-forest: #65b32e;
+    --protec-forest-deep: #0b5d27;
+    --protec-leaf: #7ad959;
+    --protec-surface: #0f1b14;
+    --protec-border: #203428;
+    --protec-ink: #ebf3ed;
+    --protec-muted: #9eb5a6;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: "Cairo", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  html[lang="en"] {
+    font-family: "Plus Jakarta Sans", "Cairo", system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono-num {
+    font-family: "JetBrains Mono", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
